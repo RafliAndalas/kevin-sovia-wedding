@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <path d="M200 60 C170 30 140 30 110 50 C80 70 50 40 20 60" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M200 60 C230 30 260 30 290 50 C320 70 350 40 380 60" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Central Diamond Flourish -->
+  <polygon points="200,48 212,60 200,72 188,60" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+  <circle cx="200" cy="60" r="3" fill="#D4AF37"/>
+  <circle cx="140" cy="40" r="2.5" fill="#8A9A86" opacity="0.8"/>
+  <circle cx="260" cy="40" r="2.5" fill="#8A9A86" opacity="0.8"/>
+  <!-- Leaf details -->
+  <path d="M140 40 Q155 35 150 25 Q135 30 140 40 Z" fill="#8A9A86" opacity="0.4"/>
+  <path d="M260 40 Q245 35 250 25 Q265 30 260 40 Z" fill="#8A9A86" opacity="0.4"/>
+  <path d="M80 65 Q90 55 95 65 Q85 75 80 65 Z" fill="#D4AF37" opacity="0.35"/>
+  <path d="M320 65 Q310 55 305 65 Q315 75 320 65 Z" fill="#D4AF37" opacity="0.35"/>
+</svg>

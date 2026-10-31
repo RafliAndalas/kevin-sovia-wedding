@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" fill="none">
+  <!-- Delicate botanical arch -->
+  <path d="M50 130 C70 80 110 40 150 40 C190 40 230 80 250 130" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.6"/>
+  <path d="M70 140 C90 90 120 60 150 60 C180 60 210 90 230 140" stroke="#8A9A86" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <!-- Central Flower Blossom -->
+  <circle cx="150" cy="40" r="8" fill="none" stroke="#D4AF37" stroke-width="1.2"/>
+  <circle cx="150" cy="40" r="3" fill="#D4AF37"/>
+  <!-- Petals -->
+  <ellipse cx="150" cy="28" rx="4" ry="7" fill="#FDFBF7" stroke="#D4AF37" stroke-width="0.8"/>
+  <ellipse cx="150" cy="52" rx="4" ry="7" fill="#FDFBF7" stroke="#D4AF37" stroke-width="0.8"/>
+  <ellipse cx="138" cy="40" rx="7" ry="4" fill="#FDFBF7" stroke="#D4AF37" stroke-width="0.8"/>
+  <ellipse cx="162" cy="40" rx="7" ry="4" fill="#FDFBF7" stroke="#D4AF37" stroke-width="0.8"/>
+  <!-- Olive & Sage Leaves Left -->
+  <path d="M100 80 C85 70 85 55 100 65 C115 75 115 90 100 80 Z" fill="#8A9A86" opacity="0.4" stroke="#8A9A86" stroke-width="0.5"/>
+  <path d="M125 55 C115 42 118 30 128 42 C138 54 135 68 125 55 Z" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.5"/>
+  <!-- Olive & Sage Leaves Right -->
+  <path d="M200 80 C215 70 215 55 200 65 C185 75 185 90 200 80 Z" fill="#8A9A86" opacity="0.4" stroke="#8A9A86" stroke-width="0.5"/>
+  <path d="M175 55 C185 42 182 30 172 42 C162 54 165 68 175 55 Z" fill="#D4AF37" opacity="0.3" stroke="#D4AF37" stroke-width="0.5"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "modern-wedding-invitation",
+  "version": "1.0.0",
+  "description": "Aplikasi Web Undangan Pernikahan Modern, Estetik, dan Responsif dengan Mockup HP Elegan & Efek Fluid Card",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "wedding-invitation",
+    "undangan-pernikahan",
+    "tailwind",
+    "glassmorphism",
+    "fluid-card-appearance",
+    "phone-mockup"
+  ],
+  "author": "Google DeepMind Antigravity",
+  "license": "MIT"
+}

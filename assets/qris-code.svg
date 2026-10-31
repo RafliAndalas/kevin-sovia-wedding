@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340" fill="none">
+  <!-- Card Background -->
+  <rect width="280" height="340" rx="16" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="278" height="338" rx="15" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- QRIS Header Banner -->
+  <path d="M0 16C0 7.16344 7.16344 0 16 0H264C272.837 0 280 7.16344 280 16V45H0V16Z" fill="#1E293B"/>
+  <text x="140" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">QRIS NASIONAL</text>
+
+  <!-- Merchant Name -->
+  <text x="140" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2C2C2C" text-anchor="middle">KEVIN &amp; SOVIA WEDDING</text>
+  <text x="140" y="86" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">NMID: ID1029384918290</text>
+
+  <!-- QR Frame -->
+  <rect x="35" y="105" width="210" height="210" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  
+  <!-- QR Code Mock Elements -->
+  <!-- Top Left Target -->
+  <rect x="50" y="120" width="46" height="46" rx="4" fill="#000000"/>
+  <rect x="56" y="126" width="34" height="34" rx="2" fill="#FFFFFF"/>
+  <rect x="63" y="133" width="20" height="20" rx="1" fill="#000000"/>
+
+  <!-- Top Right Target -->
+  <rect x="184" y="120" width="46" height="46" rx="4" fill="#000000"/>
+  <rect x="190" y="126" width="34" height="34" rx="2" fill="#FFFFFF"/>
+  <rect x="197" y="133" width="20" height="20" rx="1" fill="#000000"/>
+
+  <!-- Bottom Left Target -->
+  <rect x="50" y="254" width="46" height="46" rx="4" fill="#000000"/>
+  <rect x="56" y="260" width="34" height="34" rx="2" fill="#FFFFFF"/>
+  <rect x="63" y="267" width="20" height="20" rx="1" fill="#000000"/>
+
+  <!-- QR Matrix Pattern Details -->
+  <rect x="110" y="122" width="14" height="14" fill="#000000"/>
+  <rect x="130" y="122" width="8" height="22" fill="#000000"/>
+  <rect x="145" y="130" width="18" height="8" fill="#000000"/>
+  <rect x="120" y="150" width="25" height="10" fill="#000000"/>
+  <rect x="155" y="145" width="12" height="18" fill="#000000"/>
+  
+  <rect x="105" y="175" width="70" height="70" rx="35" fill="#D4AF37" opacity="0.15"/>
+  <circle cx="140" cy="210" r="16" fill="#D4AF37"/>
+  <text x="140" y="214" font-family="'Great Vibes', cursive" font-size="14" fill="#FFFFFF" text-anchor="middle">&amp;</text>
+
+  <rect x="52" y="180" width="12" height="25" fill="#000000"/>
+  <rect x="70" y="195" width="18" height="10" fill="#000000"/>
+  <rect x="55" y="220" width="25" height="12" fill="#000000"/>
+  <rect x="190" y="180" width="15" height="15" fill="#000000"/>
+  <rect x="210" y="200" width="20" height="10" fill="#000000"/>
+  <rect x="195" y="225" width="30" height="12" fill="#000000"/>
+  
+  <rect x="110" y="260" width="20" height="15" fill="#000000"/>
+  <rect x="140" y="255" width="25" height="10" fill="#000000"/>
+  <rect x="175" y="250" width="15" height="22" fill="#000000"/>
+  <rect x="120" y="280" width="40" height="12" fill="#000000"/>
+  <rect x="195" y="280" width="25" height="15" fill="#000000"/>
+
+  <text x="140" y="328" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#9CA3AF" text-anchor="middle">Scan dengan BCA, Mandiri, GoPay, OVO, ShopeePay, Dana</text>
+</svg>

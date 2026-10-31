@@ -1,0 +1,370 @@
+/* ==========================================================================
+   WEDDING INVITATION LUXURY STYLESHEET (LANDING PAGE EDITION)
+   Palette:
+     - Champagne Gold: #D4AF37, #B89047, #F5E8C7
+     - Soft Cream: #FDFBF7, #F8F5EE
+     - Sage Green lembut: #8A9A86, #E8EFE8, #6E806A
+     - Dark Charcoal: #2C2C2C, #4A4A4A
+   ========================================================================== */
+
+:root {
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B89047;
+  --color-gold-light: #F5E8C7;
+  --color-gold-glow: rgba(212, 175, 55, 0.25);
+  --color-cream: #FDFBF7;
+  --color-cream-soft: #F8F5EE;
+  --color-sage: #8A9A86;
+  --color-sage-light: #EAEFE9;
+  --color-sage-soft: #F2F5F1;
+  --color-charcoal: #2C2C2C;
+  --color-charcoal-muted: #5A5A5A;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Font Classes */
+.font-serif-title {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-serif-sub {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(253, 251, 247, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.7);
+}
+
+/* Background Ambient Lighting */
+.ambient-bg-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-blob-1 {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.ambient-blob-2 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(138, 154, 134, 0.1) 0%, transparent 70%);
+  filter: blur(90px);
+}
+
+/* Canvas for falling golden petals/bokeh */
+#petal-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   SPECIAL EFFECT: FLUID CARD APPEARANCE (EFEK ALIRAN AIR)
+   ========================================================================== */
+
+/* Glassmorphism card surface with soft gold rim */
+.fluid-card {
+  background: rgba(253, 251, 247, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 
+    0 16px 36px -10px rgba(44, 44, 44, 0.07),
+    0 2px 6px rgba(212, 175, 55, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.25s cubic-bezier(0.19, 1.22, 0.35, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.fluid-card:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 
+    0 24px 44px -10px rgba(44, 44, 44, 0.11),
+    0 0 25px rgba(212, 175, 55, 0.16),
+    inset 0 1px 2px rgba(255, 255, 255, 0.95);
+}
+
+/* Water droplet shimmer ripple running through card on appear */
+.fluid-card::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 60%;
+  height: 220%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.fluid-card.fluid-visible::after {
+  animation: fluidWaterWave 1.6s ease-out 0.3s forwards;
+}
+
+@keyframes fluidWaterWave {
+  0% {
+    left: -70%;
+    opacity: 0.8;
+  }
+  100% {
+    left: 170%;
+    opacity: 0;
+  }
+}
+
+/* Fluid Entrance Animation States */
+.fluid-from-left {
+  opacity: 0;
+  transform: translateX(-75px) scale(0.96) rotate(-1.5deg);
+}
+
+.fluid-from-right {
+  opacity: 0;
+  transform: translateX(75px) scale(0.96) rotate(1.5deg);
+}
+
+.fluid-from-bottom {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+}
+
+/* Target visible state: settles in like a calm water drop */
+.fluid-card.fluid-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+}
+
+/* Stagger delay helpers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* ==========================================================================
+   ORNAMENTS & VISUAL ACCENTS
+   ========================================================================== */
+
+/* Shimmer gold text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #c79f32 0%, #e8c76b 50%, #b89047 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.bg-sage-soft {
+  background-color: var(--color-sage-soft);
+}
+
+.text-charcoal {
+  color: var(--color-charcoal);
+}
+
+/* Pulsing gold glow button */
+.btn-gold-luxury {
+  background: linear-gradient(135deg, #d4af37 0%, #b89047 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -4px rgba(212, 175, 55, 0.45);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gold-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -4px rgba(212, 175, 55, 0.65);
+}
+
+.btn-gold-luxury:active {
+  transform: translateY(0);
+}
+
+.btn-gold-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.6s ease;
+}
+
+.btn-gold-luxury:hover::before {
+  left: 100%;
+}
+
+/* Wax Seal Accent */
+.wax-seal {
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle, #dfb944 0%, #a67c1e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(184, 144, 71, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  animation: sealPulse 2.8s infinite ease-in-out;
+}
+
+@keyframes sealPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(184, 144, 71, 0.45);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 12px 28px rgba(184, 144, 71, 0.7);
+  }
+}
+
+/* Music vinyl disc rotation */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning-vinyl {
+  animation: spinSlow 8s linear infinite;
+}
+
+.spinning-vinyl.paused {
+  animation-play-state: paused;
+}
+
+/* Sound wave animation */
+.sound-wave-bar {
+  display: inline-block;
+  width: 3px;
+  background-color: #D4AF37;
+  border-radius: 2px;
+  margin: 0 1px;
+}
+
+.sound-wave-active .bar-1 { animation: soundWave 0.8s ease-in-out infinite alternate; }
+.sound-wave-active .bar-2 { animation: soundWave 1.1s ease-in-out infinite 0.2s alternate; }
+.sound-wave-active .bar-3 { animation: soundWave 0.7s ease-in-out infinite 0.4s alternate; }
+.sound-wave-active .bar-4 { animation: soundWave 0.9s ease-in-out infinite 0.1s alternate; }
+
+@keyframes soundWave {
+  0% { height: 4px; }
+  100% { height: 16px; }
+}
+
+/* Toast alert styling */
+.toast-notification {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(44, 44, 44, 0.92);
+  color: #FDFBF7;
+  backdrop-filter: blur(12px);
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Cover screen overlay animation */
+#invitation-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #FDFBF7;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#invitation-cover.opened {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
